@@ -209,6 +209,7 @@ menu_order: 5
     
     Usage:
         dcos marathon --config-schema
+        dcos marathon --help
         dcos marathon --info
         dcos marathon about
         dcos marathon app add [<app-resource>]
@@ -232,7 +233,13 @@ menu_order: 5
         dcos marathon group show [--group-version=<group-version>] <group-id>
         dcos marathon group remove [--force] <group-id>
         dcos marathon group update [--force] <group-id> [<properties>...]
+        dcos marathon pod add [<pod-resource>]
+        dcos marathon pod list [--json]
+        dcos marathon pod remove [--force] <pod-id>
+        dcos marathon pod show <pod-id>
+        dcos marathon pod update [--force] <pod-id>
         dcos marathon task list [--json <app-id>]
+        dcos marathon task stop [--wipe] <task-id>
         dcos marathon task show <task-id>
     
     Commands:
@@ -241,7 +248,7 @@ menu_order: 5
         app add
             Add an application.
         app list
-            Print a list of the installed applications.
+            List the installed applications.
         app remove
             Remove an application.
         app restart
@@ -278,10 +285,22 @@ menu_order: 5
             Remove a group.
         group update
             Update a group.
+        pod add
+            Create a new pod.
+        pod list
+            List the deployed pods.
+        pod remove
+            Remove a pod.
+        pod show
+            Display detailed information for a specific pod.
+        pod update
+            Update a pod.
         task list
-            Print a list of all tasks.
+            List all tasks.
+        task stop
+            Stop a task. Wipe persistent data if `--wipe` is set.
         task show
-            Print a specific task.
+            List a specific task.
     
     Options:
         --app-version=<app-version>
